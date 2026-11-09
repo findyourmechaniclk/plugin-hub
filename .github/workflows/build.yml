@@ -21,6 +21,7 @@ jobs:
     # is new, which makes the differential build fail
     if: github.event_name != 'push' || github.repository_owner == 'runelite'
     runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
     - uses: actions/checkout@v6
       with:
